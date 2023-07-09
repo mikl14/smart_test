@@ -1,0 +1,326 @@
+body
+{
+	background-color: #f0f3f5;
+	
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	font-family: -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+	font-style: normal;
+	font-stretch: normal;
+	letter-spacing: normal;
+}
+
+header
+{
+	width: 100%;
+	height: 71px;
+
+	background-color: white;
+
+	display: flex;
+	align-items: center;
+}
+header img
+{
+	width: 253px;
+	height: 50px;
+	margin-left: 10%;
+}
+
+#header2
+{
+	top: 71px;
+	position: absolute;
+	width:100%;
+	height: 232px;
+
+	background-image: url('https://websbor.gks.ru/online/bg.3265b447620275153e90.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: -999;
+}
+
+#title
+{
+	height: 136px;
+	width: 100%;
+	display: flex;
+	color: white;
+	font-size: 32px;
+	font-weight: 700;
+}
+#title span
+{
+	margin-top: 56px;
+	margin-left: 10%;
+}
+
+.window
+{
+	background-color: white;
+	box-shadow: 0 10px 20px 0 rgba(53,110,171,.11);
+	border-radius: 3px;
+}
+
+.opros
+{
+	height: 400px;
+	width: 300px;
+}
+
+.opros span
+{
+	display: inline-block;
+	margin-left: 20px;
+	margin-top:16px;
+	font-size: 24px;
+	margin-bottom: 8px;
+	font-weight: 700;
+}
+
+.opros ul
+{
+	margin-left:20px;
+	margin-bottom: 15px;
+}
+
+.opros button
+{
+	margin-left:20px;
+}
+
+ul
+{
+	list-style-type: circle;
+	margin: 0;
+}
+button
+{
+	cursor: pointer;
+	background-color: #2c61d4;
+	color: white;
+	
+	font-family: -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+	font-style: normal;
+	font-stretch: normal;
+	letter-spacing: normal;
+	font-weight: bold;
+
+	border: none;
+	border-radius: 3px;
+	outline: none;
+
+	font-size: 16px;
+	width: 150px;
+	height: 30px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button:hover
+{
+	background-color: white;
+	color: #2c61d4;
+	outline: 1px solid #2c61d4;
+}
+
+.black_screen
+{
+	display: none;/*меняется js на flex*/
+	
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+
+	background-color: rgba(0,0,0,0.4);
+}
+
+.popup
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -225px;
+	margin-top: -300px;
+
+	color: black;
+	background-color: white;
+	height: 600px;
+	width: 450px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#auth
+{
+	margin:  0;
+	padding: 0;
+	height: 470px;
+	width: 100%;
+}
+
+#logo
+{
+	width: 100%;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	margin: 0;
+	padding: 0;
+}
+
+#page1
+{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#input_div
+{
+	width: 100%;
+	height: 70%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+}
+
+#input_div span
+{
+	font-size: 50px;
+	font-weight: 700;
+}
+
+#input_div div
+{
+	width: 70%;
+	font-size:  30px;
+	display: flex;
+	align-items: center;
+}
+
+#page1 input:not([type="radio"])
+{
+	width: 70%;
+	height: 40px;
+	font-size: 35px;
+	padding: 2.5px;
+	margin: 0;
+	text-align: center;
+	border: 1px solid #2c61d4;
+	border-radius: 10px;
+}
+
+.custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  /* для элемента label связанного с .custom-radio */
+  .custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  /* создание в label псевдоэлемента  before со следующими стилями */
+  .custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+  /* стили при наведении курсора на радио */
+  .custom-radio:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+  }
+  /* стили для активной радиокнопки (при нажатии на неё) */
+  .custom-radio:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+  }
+  /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+  .custom-radio:focus:not(:checked)+label::before {
+    border-color: #80bdff;
+  }
+  /* стили для радиокнопки, находящейся в состоянии checked */
+  .custom-radio:checked+label::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  }
+
+#page1 button
+{
+	font-size:  30px;
+	width: 250px;
+	height: 50px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+#page2
+{
+	height: 100%;
+	width: 100%;
+	display: none; 
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+}
+
+#page2 div
+{
+	width: 100%;
+}
+
+#page2 #buttons
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#buttons button{
+	font-size:  30px;
+	width: 200px;
+	height: 50px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+#page2 #info
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 700;
+}
