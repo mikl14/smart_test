@@ -1,26 +1,6 @@
 <?php
 session_start();
 
-// switch ($_GET['act']) {
-//   case 'up':
-//     //провальная попытка сделать по умному
-//     foreach ($_POST as $key => $value) {
-//       if($key != 'navig' && $value)
-//       {
-//         $_SESSION[$key] = $value;
-//       }
-//     }
-//     header('location:/html/answer_base.php');
-//     print_r($_SESSION);
-//     break;
-//   case 'end':
-//     session_destroy();
-//     header('location:../');
-//     break;
-//   default:
-    
-//     break;
-// }
 ?>
 <!DOCTYPE html>
 <html>
