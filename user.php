@@ -23,7 +23,7 @@ class User
 
     public function check_answer($id,$arg)
     {
-    $this->answers[$id] = $arg;
+        $this->answers[$id] = $arg;
     }
 }
 

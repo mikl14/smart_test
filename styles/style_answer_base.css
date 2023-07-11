@@ -1,0 +1,291 @@
+body
+{
+	background-image: url(bg.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+   
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	font-family: -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+	font-style: normal;
+	font-stretch: normal;
+	letter-spacing: normal;
+}
+
+header
+{
+	width: 100%;
+	height: 71px;
+
+	background-color: white;
+
+	display: flex;
+	align-items: center;
+}
+header img
+{
+	width: 253px;
+	height: 50px;
+	margin-left: 10%;
+}
+
+.window
+{
+	background-color: white;
+	box-shadow: 0 10px 20px 0 rgba(53,110,171,.11);
+	border-radius: 3px;
+}
+
+.opros
+{
+	height: 584px;
+	width: 410px;
+    outline: 3px solid #2c61d4;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+}
+
+.opros span
+{
+	display: inline-block;
+	margin-top:16px;
+	font-size: 26px;
+	margin-bottom: 8px;
+	font-weight: 700;
+}
+
+
+button
+{
+	cursor: pointer;
+	background-color: #2c61d4;
+	color: white;
+	
+	font-family: -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+	font-style: normal;
+	font-stretch: normal;
+	letter-spacing: normal;
+	font-weight: bold;
+
+	border: none;
+	border-radius: 3px;
+	outline: none;
+
+	font-size: 16px;
+	width: 150px;
+	height: 30px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button:hover
+{
+	background-color: white;
+	color: #2c61d4;
+	outline: 1px solid #2c61d4;
+}
+
+.big_q
+{
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.small_q
+{
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.desc
+{
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.yesno
+{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 20px;
+}
+
+.yesno button
+{
+	height: 40px;
+	font-size: 25px;
+}
+
+.radio
+{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 10px;
+}
+
+.input-radio{
+  display: inline-block;
+}
+
+.type51 > label
+{
+	padding: 20px;
+	height: 120px !important;
+	width: 150px !important;
+	text-align: center;
+}
+
+.flex-container-around
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+
+input[type=radio] {
+    display: none;
+  }
+  input[type=radio] + label {
+  	width: 70px;
+  	height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    border: 1px solid #ddd;
+    font-weight: 500;
+ 
+  }
+ input[type=radio] + label:hover {
+    outline: 5px solid #2c61d4;
+    outline-offset: -5px;
+    transition: 0.2s;
+  }
+  input[type=radio]:checked + label {
+    outline: 5px solid #2c61d4;
+    outline-offset: -5px;
+    transition: 0.2s;
+  }
+
+.zag
+{
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.fond, .fond_q
+{
+	width: 100%;
+	font-size: 18px;
+	display: grid;
+	grid-template-columns:32% 32% 32%;
+	grid-gap: 2%;
+}
+.fond_q
+{
+	margin-top: 10px;
+}
+.fond_q > div
+{
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	min-height: 50px;
+	text-align: right;
+}
+.fond_q > div > input
+{
+	width: 95%;
+	height: 90%;
+	border: 1px solid #2c61d4;
+	border-radius: 3px;
+	font-size: 90%;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-weight: 400;
+}
+
+textarea
+{
+	font-family: -apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+	font-size: 25px;
+	min-height: 50px;
+	min-width: 90%;
+	max-height: 100px;
+	max-width: 90%;
+	padding: 10px 15px;
+	border-radius: 3px;
+	border: 1px solid #2c61d4;
+}
+textarea:focus
+{
+	border: 1px solid #2c61d4;
+	outline: none;
+}
+
+#gostinic, #specsred, #sanatorno, #orgotd
+{
+	display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.backdalee
+{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 25px;
+}
+
+.backdalee button
+{
+	height: 40px;
+	font-size: 25px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2c61d4 white;
+}
+
+/* для Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: white;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #2c61d4;
+  border-radius: 5px;
+  border: 3px solid white;
+}

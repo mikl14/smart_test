@@ -20,15 +20,12 @@ function get_custom_query($query)
     if (!pg_connection_busy($GLOBALS['dbconn'])) 
     {
         $result = pg_query($query);
-
-        if (!$result) 
+        if ($result) 
         {
-            echo "Произошла ошибка.\n";
-            exit;
+            $arr = pg_fetch_all($result);
+            return $arr;
         }
-        $arr = pg_fetch_array($result);
-        
-        echo $arr[0];
+        return 0;
     }
 }
 ?>

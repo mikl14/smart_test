@@ -59,7 +59,7 @@ $(document).ready(function(){
 	$("#next").click(function(e)
 	{
 		e.preventDefault();
-		location.href="/?page=1";
+		location.href="/html/answer_base.php";
 	});
 
 });
